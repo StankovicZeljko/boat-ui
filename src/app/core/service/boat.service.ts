@@ -1,9 +1,19 @@
 import { Injectable } from '@angular/core';
+import { environment } from '../../../environments/environment.development';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { BoatResponse } from '../models/boat-response.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class BoatService {
 
-  constructor() { }
+  private apiUrl: string = environment.baseApiUrl + "/api/boat"
+
+  constructor(private http: HttpClient) { }
+
+  getAllBoats(): Observable<BoatResponse[]> {
+    return this.http.get<BoatResponse[]>(this.apiUrl);
+  }
 }
