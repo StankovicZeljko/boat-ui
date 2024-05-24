@@ -1,6 +1,9 @@
 <div class="list-view">
+    <div class="navbar">
+        <a mat-raised-button color="accent" routerLink="/create">Add Boat</a>
+    </div>
     <div class="list">
-        <mat-list role="list" *ngFor="let boat of boats">
+        <mat-list role="list" *ngFor="let boat of boats()">
             <app-list-item [boat]="boat"></app-list-item>
         </mat-list>
     </div>

@@ -1,0 +1,34 @@
+<form class="form" (ngSubmit)="onSubmit()">
+    <div>
+        <mat-form-field appearance="outline">
+            <mat-label>Name</mat-label>
+            <input id="name" [(ngModel)]="boatRequest.name" name="name" required matInput
+                placeholder="Please enter Name for Boat">
+        </mat-form-field>
+    </div>
+
+    <div>
+        <mat-form-field appearance="outline">
+            <mat-label for="capacity">Capacity:</mat-label>
+            <input id="capacity" [(ngModel)]="boatRequest.capacity" name="capacity" type="number" required matInput
+                placeholder="Please enter Capacity">
+        </mat-form-field>
+
+    </div>
+
+    <div>
+        <mat-form-field appearance="outline">
+            <mat-label for="description">Description:</mat-label>
+            <textarea id="description" [(ngModel)]="boatRequest.description" name="description" required matInput
+                placeholder="Please enter Capacity"></textarea>
+        </mat-form-field>
+    </div>
+
+    <div>
+        <mat-checkbox id="available" [(ngModel)]="boatRequest.available" name="available">Available</mat-checkbox>
+    </div>
+    <div class="form-action">
+        <button mat-raised-button color="primary" type="submit">Add</button>
+        <a mat-raised-button color="warn" routerLink="/overview">Cancel</a>
+    </div>
+</form>

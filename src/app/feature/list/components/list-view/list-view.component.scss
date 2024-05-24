@@ -1,9 +1,18 @@
 .list-view {
+  max-width: 80vw;
+  width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
+  justify-content: center;
 }
 
 .list {
-  width: 80vw;
+  width: 600px;
+}
+
+.navbar {
+  align-self: flex-end;
+  margin-top: 30px;
+  margin-bottom: 15px;
 }
